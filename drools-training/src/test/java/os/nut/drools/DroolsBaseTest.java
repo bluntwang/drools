@@ -4,24 +4,32 @@
  */
 package os.nut.drools;
 
-import org.junit.Before;
-import org.kie.api.KieServices;
-import org.kie.api.runtime.KieContainer;
+import com.dtdream.commons.test.SimpleTest;
+import com.dtdream.commons.test.TestContainer;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
- * @author Xiong Zhijun
- * @email hust.xzj@gmail.com
- * 
+ * Created by wzy on 2016/10/24.
  */
-public abstract class DroolsBaseTest {
-
-	protected KieServices kieServices;
-	protected KieContainer kieContainer;
-
-	@Before
-	public void setUp() {
-		kieServices = KieServices.Factory.get();
-		kieContainer = kieServices.getKieClasspathContainer();
+@SpringBootTest(classes = {DroolsBaseTest.class})
+@ComponentScan(basePackages = {
+		"os.nut",
+		"os.nut.drools"
+})
+public class DroolsBaseTest extends TestContainer {
+	@Override
+	protected SimpleTest[] getTests() {
+		return new SimpleTest[]{new OrderTest()};
 	}
+
+//	protected KieServices kieServices;
+//	public KieContainer kieContainer;
+//
+//	@Before
+//	public void setUp() {
+//		kieServices = KieServices.Factory.get();
+//		kieContainer = kieServices.getKieClasspathContainer();
+//	}
 
 }

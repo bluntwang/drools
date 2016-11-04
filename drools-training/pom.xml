@@ -6,38 +6,43 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
-		<!-- drools -->
 		<dependency>
-			<groupId>org.kie</groupId>
-			<artifactId>kie-api</artifactId>
-			<version>6.0.1.Final</version>
+			<groupId>com.dtdream.drools</groupId>
+			<artifactId>OrderDemo</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-core</artifactId>
-			<version>6.0.1.Final</version>
+			<groupId>com.dtdream.commons</groupId>
+			<artifactId>commons-boot-starter-bre</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-compiler</artifactId>
-			<version>6.0.1.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-decisiontables</artifactId>
-			<version>6.0.1.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.drools</groupId>
-			<artifactId>drools-templates</artifactId>
-			<version>6.0.1.Final</version>
+			<groupId>com.dtdream.gamma</groupId>
+			<artifactId>order-api</artifactId>
+			<version>CMAIT-SNAPSHOT</version>
 		</dependency>
 		<!-- test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>1.4.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dtdream.commons</groupId>
+			<artifactId>commons-test</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>jboss-maven2-release-repository</id>
+			<url>http://repository.jboss.org/maven2/</url>
+		</repository>
+	</repositories>
 </project>
